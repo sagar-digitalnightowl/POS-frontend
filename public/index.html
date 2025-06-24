@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description"content="Web site created using create-react-app"/>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/app0541.css?v=530">
+    <link rel="stylesheet" href="assets/css/vendor.css?v=530">
+
+    <link rel="stylesheet" href="assets/css/app.css?v=530">
+    <link rel="stylesheet" href="assets/css/vendor.css?v=530">
+    <link rel="stylesheet" href="assets/css/vendor.css?v=530"/>
+    <title>pos-application</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="text/javascript">base_path = "index.html";
+      APP = {};
+      APP.PUSHER_APP_KEY = '506ae1e4a5b7eb4b2711';
+      APP.PUSHER_APP_CLUSTER = '';
+      APP.INVOICE_SCHEME_SEPARATOR = '-';
+      APP.PUSHER_ENABLED = '';
+      APP.USER_ID = '';
+      </script>
+      <script src="js/vendor0541.js?v=530"></script>
+
+      <script src="js/lang/en0541.js?v=530"></script>
+  
+  <script>
+      Dropzone.autoDiscover = false;
+      moment.tz.setDefault('');
+      $(document).ready(function(){
+          $.ajaxSetup({
+              headers: {
+                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              }
+          });
+          
+              });
+      
+      var financial_year = {
+          start: moment(''),
+          end: moment(''),
+      }
+      
+      var datepicker_date_format = "mm/dd/yyyy";
+      var moment_date_format = "MM/DD/YYYY";
+      var moment_time_format = "HH:mm";
+  
+      var app_locale = "en";
+  
+      var non_utf8_languages = [
+                  "ar",
+                  "hi",
+                  "ps",
+              ];
+  
+      var __default_datatable_page_entries = "25";
+  
+      var __new_notification_count_interval = "60000";
+  </script>
+  
+      <script src="js/lang/en0541.js?v=530"></script>
+  
+  <script src="js/functions0541.js?v=530"></script>
+  <script src="js/common0541.js?v=530"></script>
+  <script src="js/app0541.js?v=530"></script>
+  <script src="js/help-tour0541.js?v=530"></script>
+  <script src="js/documents_and_note0541.js?v=530"></script>
+  <script type="text/javascript">
+    $(document).on("ifChecked", ".allow_login", function(){
+        $("#" + $(this).attr("data-loginDiv")).removeClass("hide");
+    })
+    $(document).on("ifUnchecked", ".allow_login", function(){
+        $("#" + $(this).attr("data-loginDiv")).addClass("hide");
+    })
+    $(document).on("contactFormvalidationAdded", "#contact_add_form", function(e) {
+
+        $("#contact_add_form .input-icheck").iCheck({
+            checkboxClass: "icheckbox_square-blue"
+        });
+
+        if($("#username0").length) {
+            $( "#username0" ).rules( "add", {
+                minlength: 5,
+                remote: {
+                    url: "/business/register/check-username",
+                    type: "post",
+                    data: {
+                        username: function() {
+                            return $( "#username0" ).val();
+                        }
+                    }
+                },
+                messages: {
+                    remote: "Invalid username or User already exist"
+                }
+            });
+        }
+
+        if($("#username1").length) {
+            $( "#username1" ).rules( "add", {
+                minlength: 5,
+                remote: {
+                    url: "/business/register/check-username",
+                    type: "post",
+                    data: {
+                        username: function() {
+                            return $( "#username1" ).val();
+                        }
+                    }
+                },
+                messages: {
+                    remote: "Invalid username or User already exist"
+                }
+            });
+        }
+
+        if($("#username2").length) {
+            $( "#username2" ).rules( "add", {
+                minlength: 5,
+                remote: {
+                    url: "/business/register/check-username",
+                    type: "post",
+                    data: {
+                        username: function() {
+                            return $( "#username2" ).val();
+                        }
+                    }
+                },
+                messages: {
+                    remote: "Invalid username or User already exist"
+                }
+            });
+        }
+    });
+</script>
+<script type="text/javascript">
+	$(document).ready( function(){
+        $('#essentials_dob').datepicker();
+		$('.clock_in_btn, .clock_out_btn').click( function() {
+            var type = $(this).data('type');
+            if (type == 'clock_in') {
+                $('#clock_in_clock_out_modal').find('#clock_in_text').removeClass('hide');
+                $('#clock_in_clock_out_modal').find('#clock_out_text').addClass('hide');
+                $('#clock_in_clock_out_modal').find('.clock_in_note').removeClass('hide');
+                $('#clock_in_clock_out_modal').find('.clock_out_note').addClass('hide');
+            } else if (type == 'clock_out') {
+                $('#clock_in_clock_out_modal').find('#clock_in_text').addClass('hide');
+                $('#clock_in_clock_out_modal').find('#clock_out_text').removeClass('hide');
+                $('#clock_in_clock_out_modal').find('.clock_in_note').addClass('hide');
+                $('#clock_in_clock_out_modal').find('.clock_out_note').removeClass('hide');
+            }
+            $('#clock_in_clock_out_modal').find('input#type').val(type);
+
+            $('#clock_in_clock_out_modal').modal('show');
+        });
+	});
+
+	$(document).on('submit', 'form#clock_in_clock_out_form', function(e) {
+        e.preventDefault();
+        $(this).find('button[type="submit"]').attr('disabled', true);
+        var data = $(this).serialize();
+
+        $.ajax({
+            method: $(this).attr('method'),
+            url: $(this).attr('action'),
+            dataType: 'json',
+            data: data,
+            success: function(result) {
+                if (result.success == true) {
+                    $('div#clock_in_clock_out_modal').modal('hide');
+
+                    var shift_details = document.createElement("div");
+                    if (result.current_shift) {
+                        shift_details.innerHTML = result.current_shift;
+                    }
+
+                    swal({
+                        title: result.msg,
+                        content: shift_details,
+                        icon: 'success'
+                    });
+
+                    if (typeof attendance_table !== 'undefined') {
+                        attendance_table.ajax.reload();
+                    }
+                    if (result.type == 'clock_in') {
+                        $('.clock_in_btn').addClass('hide');
+                        $('.clock_out_btn').removeClass('hide');
+                    } else if(result.type == 'clock_out') {
+                        $('.clock_out_btn').addClass('hide');
+                        $('.clock_in_btn').removeClass('hide');
+                    }
+                } else {
+                    var shift_details = document.createElement("p");
+                    if (result.shift_details) {
+                        shift_details.innerHTML = result.shift_details;
+                    }
+
+                    swal({
+                        title: result.msg,
+                        content: shift_details,
+                        icon: 'error'
+                    })
+                }
+                $('#clock_in_clock_out_form')[0].reset();
+                $('#clock_in_clock_out_form').find('button[type="submit"]').removeAttr('disabled');
+            },
+        });
+    });
+    
+    $(document).on('click', '#get_current_location', function(){
+        getFullAddress();
+    });
+
+    function getFullAddress() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+                $.ajax({
+                    url: '/user-location/' + latitude + ',' + longitude,
+                    dataType: 'json',
+                    success: function(result) {
+                        if (typeof result.address !== 'undefined') {
+
+                            $("input#clock_in_out_location").val(result.address);
+                            $("span.clock_in_out_location").text(result.address);
+                            $("div.ask_location").hide();
+                        } else if (typeof result.error_message !== 'undefined') {
+                            console.log(result.error_message);
+                        }
+                    }
+                });
+
+            },
+            () => {
+                $("div.ask_location").show();
+                $("span.location_required").text("Location is required, you must enable location")
+              console.log( "Error: The Geolocation service failed.");
+            }
+          );
+        } else {
+            $("div.ask_location").show();
+            $("span.location_required").text("Location is required, you must enable location")
+          // Browser doesn't support Geolocation
+          console.log("Browser doesn't support Geolocation");
+        }
+    }
+</script>
+<script type="text/javascript">
+    $(document).ready( function(){
+        var locale = "en";
+        var isRTL =  false; 
+        $('#calendar').fullCalendar('option', {
+            locale: locale,
+            isRTL: isRTL
+        });
+    });
+</script>
+<script type="text/javascript">
+    $('#task_modal').on('shown.bs.modal', function() {"{"}
+    $('form#task_form .datepicker').datetimepicker({"{"}
+    format: moment_date_format + ' ' + moment_time_format, ignoreReadonly: true,
+    {"}"}); $('form#task_form .select2').select2({"{"} dropdownParent: $(this){" "}
+    {"}"}); tinymce.init({"{"}
+    selector: 'textarea#to_do_description',
+    {"}"}); if ($('#media_upload').length) {"{"}
+    $(this).find("div#media_upload").dropzone({"{"}
+    url: $('#media_upload_url').val(), paramName: 'file', uploadMultiple: true,
+    autoProcessQueue: false, addRemoveLinks: true, params: {"{"}
+    'model_id': $('#model_id').val(), 'model_type': $('#model_type').val(),
+    'model_media_type': $('#model_media_type').val()
+    {"}"}, headers: {"{"}
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    {"}"}, success: function(file, response) {"{"}
+    if (response.success) {"{"}
+    toastr.success(response.msg); $("#task_modal").modal('hide');
+    {"}"} else {"{"}
+    toastr.error(response.msg);
+    {"}"}
+    {"}"},{"}"});
+    {"}"}
+    //form validation $("form#task_form").validate();
+    {"}"}); $('#task_modal').on('hide.bs.modal', function(){"{"}
+    tinymce.remove("textarea#to_do_description");
+    {"}"}); //form submit $(document).on('submit', 'form#task_form', function(e)
+    {"{"}
+    e.preventDefault(); var url = $(this).attr("action"); var method =
+    $(this).attr("method"); var data = $("form#task_form").serialize(); var
+    ladda = Ladda.create(document.querySelector('.ladda-button'));
+    ladda.start(); $.ajax({"{"}
+    method: method, url: url, data: data, dataType: "json", success:
+    function(result){"{"}
+    ladda.stop(); if(result.success == true){"{"}
+    var myDropzone = Dropzone.forElement("#media_upload"); if (typeof
+    result.todo_id !== 'undefined') {"{"}
+    myDropzone.options.params.model_id = result.todo_id;
+    {"}"}
+    myDropzone.processQueue(); if (typeof task_table !== 'undefined') {"{"}
+    task_table.ajax.reload();
+    {"}"}
+    if ($('#task_modal').length) {"{"}
+    $('#task_modal').modal('hide');
+    {"}"}
+    if ($('#calendar').length) {"{"}
+    $('#calendar').fullCalendar( 'refetchEvents' );
+    {"}"}
+    {"}"} else {"{"}
+    toastr.error(result.msg);
+    {"}"}
+    {"}"}
+    {"}"});
+    {"}"});
+  </script>
+    <script src="js/login0541.js?v=530"></script>
+    <style>
+      body {
+          min-height: 100vh;
+          /* background-color: #243949; */
+          color: #fff;
+          background-size: cover;
+          background-image: linear-gradient(258deg, #009688, #607d8b);
+          /* background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.12'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+          background-image: url("img/main.html");
+      }
+      .navbar-default {
+          background-color: transparent;
+          border: none;
+      }
+      .navbar-static-top {
+          margin-bottom: 19px;
+      }
+      .navbar-default .navbar-nav>li>a {
+          color: #fff;
+          font-weight: 600;
+          font-size: 15px
+      }
+      .navbar-default .navbar-nav>li>a:hover{
+          color: #ccc;
+      }
+      .navbar-default .navbar-brand {
+          color: #ccc;
+      }
+  </style>
+    
+  </body>
+</html>
