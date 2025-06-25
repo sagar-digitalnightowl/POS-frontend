@@ -45,7 +45,7 @@ const Login = () => {
             expires: 3,
             path: '/',
             sameSite: 'Lax',
-            secure: false,
+            secure: window.location.protocol === 'https:',
           });
 
           setTimeout(() => {
