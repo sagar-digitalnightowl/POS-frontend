@@ -7,6 +7,8 @@ import Calculator from './Calculator';
 import ApplicationTourModal from './ApplicationTourModal';
 import AddToDoModal from './AddToDoModal';
 import TodayProfitModal from './TodayProfitModal';
+import Cookies from "js-cookie"
+
 
 const Header = () => {
   const navigate = useNavigate();
@@ -18,6 +20,8 @@ const Header = () => {
   const [isTourModalOpen, setIsTourModalOpen] = useState(false);
   const [isAddToDoModalOpen, setIsAddToDoModalOpen] = useState(false);
   const [isProfitModalOpen, setIsProfitModalOpen] = useState(false);
+
+  const [message, setMessage] = useState('');
 
   const dropdownRef = useRef(null);
 
@@ -69,6 +73,31 @@ const Header = () => {
     setIsProfitModalOpen(false);
   };
 
+
+  const handleLogout = async () => {
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/admin/admin/adminSign/logout`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include'
+      });
+      if (response.ok) {
+        const data = await response.json();
+        if (data) {
+          console.log(data, "data")
+          navigate("/login");
+        }
+      } else {
+        setMessage('Error during logout. Please try again.');
+      }
+    } catch (error) {
+      setMessage('Network error. Please check your connection.');
+    }
+  }
+
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -96,15 +125,15 @@ const Header = () => {
             ☰
             <span className="sr-only">Toggle navigation</span>
           </Link>
-          <FontAwesomeIcon 
-            icon={faInfoCircle} 
-            className="fas fa-info-circle pull-left mt-10 cursor-pointer" 
-            style={{ marginTop: 24, color: 'white' }} 
+          <FontAwesomeIcon
+            icon={faInfoCircle}
+            className="fas fa-info-circle pull-left mt-10 cursor-pointer"
+            style={{ marginTop: 24, color: 'white' }}
             aria-hidden="true"
-            data-toggle="popover" 
-            data-html="true" 
-            title="Active Package Details" 
-            data-placement="right" 
+            data-toggle="popover"
+            data-html="true"
+            title="Active Package Details"
+            data-placement="right"
             data-trigger="hover"
             data-content=""
           />
@@ -126,13 +155,13 @@ const Header = () => {
               <ul className={`dropdown-menu ${plusDropdownOpen ? 'show' : ''}`}>
                 <li>
                   <Link to="/calendar">
-                    <FontAwesomeIcon icon={faCalculator} /> 
+                    <FontAwesomeIcon icon={faCalculator} />
                     <span onClick={() => navigate("/calender")}>Calendar </span>
                   </Link>
                 </li>
                 <li>
                   <Link to="#" className="btn-modal" data-href="/essentials/todo/create" data-container="#task_modal" onClick={handleAddToDoClick}>
-                    <FontAwesomeIcon icon={faClipboardCheck} aria-hidden="true" /> 
+                    <FontAwesomeIcon icon={faClipboardCheck} aria-hidden="true" />
                     Add To Do
                   </Link>
                 </li>
@@ -207,9 +236,9 @@ const Header = () => {
                       <Link to="/user/profile" className="btn btn-default btn-flat"> Profile</Link>
                     </div>
                     <div className="pull-right">
-                      <Link to="/login" className="btn btn-default btn-flat">
-                        <span onClick={() => navigate("/login")}>Sign Out</span>
-                      </Link>
+                      <div onClick={handleLogout} className="btn btn-default btn-flat">
+                        <span>Sign Out</span>
+                      </div>
                     </div>
                   </li>
                 </ul>

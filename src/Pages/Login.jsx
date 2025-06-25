@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import Cookies from 'js-cookie'
 
 const Login = () => {
   const navigate = useNavigate();
@@ -12,41 +13,55 @@ const Login = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [message, setMessage] = useState('');
-  const handleLogin= async (e) => {
-        e.preventDefault();  // Prevent the default form submission behavior
-        // Validate inputs
-        if (!username || !password) {
-            setMessage("Please fill in both fields.");
-            return;
-        }
 
-        const loginData = {
-            username: username,
-            password: password,
-            agreement: agreement
-        };
+  const handleLogin = async (e) => {
+    e.preventDefault();  // Prevent the default form submission behavior
+    // Validate inputs
+    if (!username || !password) {
+      setMessage("Please fill in both fields.");
+      return;
+    }
 
-        try {
-            // Step 3: Make an API request to login
-            const response = await fetch(`${process.env.REACT_APP_BASE_URL}/admin/admin/adminSign/login`, {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(loginData),
-            });
-            if (response.ok) {
-                const data = await response.json();
-                if (data) {
-                    navigate('/');
-                } 
-            } else {
-                setMessage('Error during login. Please try again.');
-            }
-        } catch (error) {
-            setMessage('Network error. Please check your connection.');
+    const loginData = {
+      username: username,
+      password: password,
+      agreement: agreement
+    };
+
+    try {
+      // Step 3: Make an API request to login
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/admin/admin/adminSign/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(loginData),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        if (data) {
+
+          Cookies.set('token', data?.token, {
+            expires: 3,
+            path: '/',
+            sameSite: 'Lax',
+            secure: false,
+          });
+
+          setTimeout(() => {
+            navigate('/');
+          }, 100)
+
         }
+      } else {
+        setMessage('Error during login. Please try again.');
+      }
+    } catch (error) {
+      setMessage('Network error. Please check your connection.');
+    }
   }
+
+
   return (
     <div className="container-fluid" style={{ height: '100vh' }}>
       <div className="row eq-height-row" style={{ height: '100%' }}>
@@ -73,70 +88,70 @@ const Login = () => {
               <div style={{ width: '100%', maxWidth: '400px' }}>
                 <p className="form-header text-white" style={{ fontSize: '24px', textAlign: 'center' }}>Login</p>
                 <form onSubmit={handleLogin}>
-          {/* Username Field */}
-          <div className="form-group">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-            />
-          </div>
+                  {/* Username Field */}
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Username"
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
+                      required
+                    />
+                  </div>
 
-          {/* Password Field */}
-          <div className="form-group">
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
+                  {/* Password Field */}
+                  <div className="form-group">
+                    <input
+                      type="password"
+                      className="form-control"
+                      placeholder="Password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                    />
+                  </div>
 
-          {/* Remember Me Checkbox */}
-          <div className="form-group">
-            <label>
-              <input
-                type="checkbox"
-                checked={rememberMe}
-                onChange={(e) => setRememberMe(e.target.checked)}
-              />{' '}
-              Remember Me
-            </label>
-          </div>
+                  {/* Remember Me Checkbox */}
+                  <div className="form-group">
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked={rememberMe}
+                        onChange={(e) => setRememberMe(e.target.checked)}
+                      />{' '}
+                      Remember Me
+                    </label>
+                  </div>
 
-          {/* Terms and Conditions Checkbox */}
-          <div className="form-group">
-            <label>
-              <input
-                type="checkbox"
-                checked={agreement}
-                onChange={(e) => setAgreement(e.target.checked)}
-                required
-              />{' '}
-              I agree to the{' '}
-              <Link to="/login/general_agreement" target="_blank">
-                Terms and Conditions
-              </Link>
-            </label>
-          </div>
+                  {/* Terms and Conditions Checkbox */}
+                  <div className="form-group">
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked={agreement}
+                        onChange={(e) => setAgreement(e.target.checked)}
+                        required
+                      />{' '}
+                      I agree to the{' '}
+                      <Link to="/login/general_agreement" target="_blank">
+                        Terms and Conditions
+                      </Link>
+                    </label>
+                  </div>
 
-          {/* Login Button */}
-          <div className="form-group">
-            <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
-              Login
-            </button>
-          </div>
+                  {/* Login Button */}
+                  <div className="form-group">
+                    <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
+                      Login
+                    </button>
+                  </div>
 
-          {/* Forgot Password Link */}
-          <div className="form-group">
-            <Link to="/password/reset">Forgot Your Password?</Link>
-          </div>
-        </form>
+                  {/* Forgot Password Link */}
+                  <div className="form-group">
+                    <Link to="/password/reset">Forgot Your Password?</Link>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
