@@ -75,26 +75,29 @@ const Header = () => {
 
 
   const handleLogout = async () => {
-    try {
-      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/admin/admin/adminSign/logout`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        credentials: 'include'
-      });
-      if (response.ok) {
-        const data = await response.json();
-        if (data) {
-          console.log(data, "data")
-          navigate("/login");
-        }
-      } else {
-        setMessage('Error during logout. Please try again.');
-      }
-    } catch (error) {
-      setMessage('Network error. Please check your connection.');
-    }
+    // try {
+    //   const response = await fetch(`${process.env.REACT_APP_BASE_URL}/admin/admin/adminSign/logout`, {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     credentials: 'include'
+    //   });
+    //   if (response.ok) {
+    //     const data = await response.json();
+    //     if (data) {
+    //       console.log(data, "data")
+    //       navigate("/login");
+    //     }
+    //   } else {
+    //     setMessage('Error during logout. Please try again.');
+    //   }
+    // } catch (error) {
+    //   setMessage('Network error. Please check your connection.');
+    // }
+
+    localStorage.clear("token");
+    navigate("/login");
   }
 
 

@@ -215,9 +215,7 @@ const getCookie = (name) => {
 };
 
 const ProtectedRoute = ({ children }) => {
-  const token = Cookies.get("token");
-
-  console.log(token, "token");
+  const token = localStorage.getItem("token");
 
   if (!token) {
     return <Navigate to={"/login"} />;

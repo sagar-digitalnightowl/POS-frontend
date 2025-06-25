@@ -40,14 +40,7 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json();
         if (data) {
-
-          Cookies.set('token', data?.token, {
-            expires: 3,
-            path: '/',
-            sameSite: 'Lax',
-            secure: window.location.protocol === 'https:',
-          });
-
+          localStorage.setItem("token", data?.token)
           setTimeout(() => {
             navigate('/');
           }, 100)
