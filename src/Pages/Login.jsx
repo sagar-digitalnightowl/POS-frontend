@@ -8,6 +8,7 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [agreement, setAgreement] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const [email, setEmail] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
@@ -28,6 +29,7 @@ const Login = () => {
       agreement: agreement
     };
 
+    setLoading(true)
     try {
       // Step 3: Make an API request to login
       const response = await fetch(`${process.env.REACT_APP_BASE_URL}/admin/admin/adminSign/login`, {
@@ -51,6 +53,8 @@ const Login = () => {
       }
     } catch (error) {
       setMessage('Network error. Please check your connection.');
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -63,7 +67,7 @@ const Login = () => {
             <div>
               <Link to="/" style={{ fontSize: '24px', color: 'white' }}>POS APPLICATION</Link>
               <br />
-              <small style={{ color: 'white' }}>Affinity Soft</small>
+              {/* <small style={{ color: 'white' }}>Affinity Soft</small> */}
             </div>
           </div>
         </div>
@@ -136,7 +140,7 @@ const Login = () => {
                   {/* Login Button */}
                   <div className="form-group">
                     <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
-                      Login
+                      {loading ? "loading..." : "Login"}
                     </button>
                   </div>
 
