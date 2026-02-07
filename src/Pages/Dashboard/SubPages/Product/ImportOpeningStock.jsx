@@ -23,7 +23,7 @@ const ImportOpeningStocks = () => {
               <div className="box-body">
                 <form
                   method="POST"
-                  action="https://medipro.affinity-me.com/import-products/store"
+                  // action="https://medipro.affinity-me.com/import-products/store"
                   acceptCharset="UTF-8"
                   encType="multipart/form-data"
                 >
@@ -57,7 +57,9 @@ const ImportOpeningStocks = () => {
                 <br />
                 <div className="row">
                   <div className="col-sm-4">
-                    <Link to="https://medipro.affinity-me.com/files/import_products_csv_template.xls" className="btn btn-success" download="">
+                    <Link 
+                      // to="https://medipro.affinity-me.com/files/import_products_csv_template.xls" 
+                      className="btn btn-success" download="">
                       <i className="fa fa-download" /> Download template file
                     </Link>
                   </div>

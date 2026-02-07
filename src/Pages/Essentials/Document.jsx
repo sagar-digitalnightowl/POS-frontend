@@ -49,7 +49,9 @@ const Document = () => {
                 <div className="box-body">
                   <div className="row">
                     <div className="col-md-12">
-                      <form method="POST" action="https://medipro.affinity-me.com/essentials/document" acceptCharset="UTF-8" id="upload_document_form" encType="multipart/form-data">
+                      <form method="POST" 
+                      // action="https://medipro.affinity-me.com/essentials/document" 
+                      acceptCharset="UTF-8" id="upload_document_form" encType="multipart/form-data">
                         <div className="row">
                           <div className="col-sm-12">
                             <div className="col-sm-6">

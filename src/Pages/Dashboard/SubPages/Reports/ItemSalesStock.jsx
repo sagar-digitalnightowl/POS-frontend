@@ -51,7 +51,7 @@ const ItemSalesStock = () => {
                 <div id="collapseFilter"className="panel-collapse active collapse  in "aria-expanded="true">
                   <div className="box-body">
                     <form method="GET"
-                      action="https://medipro.affinity-me.com/reports/stock-report"
+                      // action="https://medipro.affinity-me.com/reports/stock-report"
                       acceptCharset="UTF-8"id="product_sell_stock_report_form">
                       <div className="col-md-3">
                         <div className="form-group">
@@ -103,10 +103,14 @@ const ItemSalesStock = () => {
                 <div className="tab-content">
                   <div>
                     <div className="btn-group" style={{ marginBottom: 10 }}>
-                      <Link className="btn btn-success" to="https://medipro.affinity-me.com/items-sales-stock/download-excel"style={{ marginRight: 10 }}>
+                      <Link className="btn btn-success" 
+                      // to="https://medipro.affinity-me.com/items-sales-stock/download-excel"
+                      style={{ marginRight: 10 }}>
                       <FontAwesomeIcon icon={faDownload} /> Download Excel
                       </Link>
-                      <Link to="https://medipro.affinity-me.com/items-sales-stock/download-pdf" className="btn btn-primary"title="PDF"target="_blank">
+                      <Link 
+                      // to="https://medipro.affinity-me.com/items-sales-stock/download-pdf" 
+                      className="btn btn-primary"title="PDF"target="_blank">
                       <FontAwesomeIcon icon={faFilePdf} /> Download Pdf
                       </Link>
                     </div>

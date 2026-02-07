@@ -34,7 +34,8 @@ const BusinessSetings = () => {
       </div>
     </section>
     <section className="content">
-      <form method="POST" action="https://medipro.affinity-me.com/business/update"
+      <form method="POST" 
+      // action="https://medipro.affinity-me.com/business/update"
         acceptCharset="UTF-8"id="bussiness_edit_form"encType="multipart/form-data">
         <div className="row">
           <div className="col-xs-12">

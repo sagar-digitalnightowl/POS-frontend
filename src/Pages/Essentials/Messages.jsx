@@ -24,7 +24,8 @@ const Messages = () => {
             </div>
             <div className="box-body"id="chat-box"style={{ height: "70vh", overflowY: "scroll" }}/>
             <div className="box-footer">
-              <form method="POST"action="https://medipro.affinity-me.com/essentials/messages"
+              <form method="POST"
+              // action="https://medipro.affinity-me.com/essentials/messages"
                 acceptCharset="UTF-8"id="add_essentials_msg_form">
                 <div className="input-group">
                   <textarea

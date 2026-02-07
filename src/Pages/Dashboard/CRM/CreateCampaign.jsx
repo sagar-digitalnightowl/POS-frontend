@@ -52,7 +52,7 @@ const CreateCampaign = () => {
                             <div className="box-body">
                                 <form
                                     method="POST"
-                                    action="https://medipro.affinity-me.com/crm/campaigns"
+                                    // action="https://medipro.affinity-me.com/crm/campaigns"
                                     acceptCharset="UTF-8"
                                     id="campaign_form"
                                 >

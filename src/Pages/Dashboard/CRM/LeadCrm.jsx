@@ -66,7 +66,7 @@ const LeadCrm = () => {
                   <button
                     type="button"
                     className="btn btn-sm btn-primary btn-add-lead pull-right m-5"
-                    data-href="https://medipro.affinity-me.com/crm/leads/create"
+                    // data-href="https://medipro.affinity-me.com/crm/leads/create"
                   >
                     <i className="fa fa-plus" /> Add
                   </button>
@@ -77,7 +77,7 @@ const LeadCrm = () => {
                         name="lead_view"
                         defaultValue="list_view"
                         className="lead_view"
-                        data-href="https://medipro.affinity-me.com/crm/leads?lead_view=list_view"
+                        // data-href="https://medipro.affinity-me.com/crm/leads?lead_view=list_view"
                       />
                       List View
                     </label>
@@ -87,7 +87,7 @@ const LeadCrm = () => {
                         name="lead_view"
                         defaultValue="kanban"
                         className="lead_view"
-                        data-href="https://medipro.affinity-me.com/crm/leads?lead_view=kanban"
+                        // data-href="https://medipro.affinity-me.com/crm/leads?lead_view=kanban"
                       />
                       Kanban Board
                     </label>

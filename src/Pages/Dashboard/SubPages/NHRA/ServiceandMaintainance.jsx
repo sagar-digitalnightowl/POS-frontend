@@ -145,7 +145,9 @@ const ServiceandMaintainance = () => {
                                                         <FontAwesomeIcon icon={faEdit} />
                                                     </Link>
                                                     &nbsp;
-                                                    <button onClick={() => deleteServiceAndMaintainance(group?._id)} className="btn btn-warning btn-sm btn-flat deletebtn" id="delete_product0" data-id={1} attr_delete="https://medipro.affinity-me.com/ar/1" type="submit" title="Delete">
+                                                    <button onClick={() => deleteServiceAndMaintainance(group?._id)} className="btn btn-warning btn-sm btn-flat deletebtn" id="delete_product0" data-id={1} 
+                                                    // attr_delete="https://medipro.affinity-me.com/ar/1" 
+                                                    type="submit" title="Delete">
                                                         <FontAwesomeIcon icon={faTrash} aria-hidden="true" />
                                                     </button>
                                                 </td>

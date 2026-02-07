@@ -45,7 +45,9 @@ const SalesRepresentativeReport = () => {
                 </div>
                 <div id="collapseFilter" className="panel-collapse active collapse  in " aria-expanded="true">
                   <div className="box-body">
-                    <form method="GET"action="https://medipro.affinity-me.com/reports/stock-report"acceptCharset="UTF-8"id="sales_representative_filter_form">
+                    <form method="GET"
+                    // action="https://medipro.affinity-me.com/reports/stock-report"
+                    acceptCharset="UTF-8"id="sales_representative_filter_form">
                       <div className="col-md-4">
                         <div className="form-group">
                           <label htmlFor="sr_id">User:</label>

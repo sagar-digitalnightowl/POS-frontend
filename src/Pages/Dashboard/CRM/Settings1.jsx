@@ -20,7 +20,9 @@ const Settings1 = () => {
             <section className="content">
                 <div className="row">
                     <div className="col-md-12">
-                        <form method="POST" action="https://medipro.affinity-me.com/crm/update-settings" acceptCharset="UTF-8"><input name="_token" type="hidden" defaultValue="U5plTqkZ82RKCeAb8UxtPpZ2vZzchL6rgENf484d" />
+                        <form method="POST" 
+                        // action="https://medipro.affinity-me.com/crm/update-settings" 
+                        acceptCharset="UTF-8"><input name="_token" type="hidden" defaultValue="U5plTqkZ82RKCeAb8UxtPpZ2vZzchL6rgENf484d" />
                         <div className="box box-solid">
                             <div className="box-body">
                                 <div className="col-md-4">

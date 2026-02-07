@@ -15,7 +15,7 @@ const Index = () => {
               <span className="icon-bar" />
             </button>
             <a className="navbar-brand" href="index">
-              Medipro
+              POS 
             </a>
           </div>
           <div id="navbar" className="navbar-collapse collapse">

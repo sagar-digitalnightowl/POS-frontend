@@ -7,12 +7,12 @@ const GeneralAggrements = () => {
     <div className="row">
       <div className="col-md-6">
         <span style={{ float: "left" }}>
-          <img src="https://medipro.affinity-me.com/img/affinity_logo.png"style={{ width: 200, height: 80 }}/>
+          {/* <img src="https://medipro.affinity-me.com/img/affinity_logo.png"style={{ width: 200, height: 80 }}/> */}
         </span>
       </div>
       <div className="col-md-6">
         <span style={{ float: "right" }}>
-          <img src="https://medipro.affinity-me.com/img/medipro_logo.png"style={{ width: 200, height: 80 }}/>
+          {/* <img src="https://medipro.affinity-me.com/img/medipro_logo.png"style={{ width: 200, height: 80 }}/> */}
         </span>
       </div>
       <div className="col-md-12">
@@ -37,7 +37,7 @@ const GeneralAggrements = () => {
           <br />
           1.The Client hereby agrees to engage the Contractor to provide the
           Client with the following services (the "Services"); <br />• Integrated
-          system for NHRA requirements (MEDIPRO): and <br />• Implementing and
+          system for NHRA requirements: and <br />• Implementing and
           installing the integrated system.
         </p>
         <p>

@@ -190,7 +190,8 @@ const CRM = () => {
               <div className="box-header with-border">
                 <i className="fas fa fa-birthday-cake" />
                 <h3 className="box-title">Birthdays</h3>
-                <Link data-href="https://medipro.affinity-me.com/crm/campaigns/create"
+                <Link 
+                // data-href="https://medipro.affinity-me.com/crm/campaigns/create"
                   className="btn btn-success btn-xs"id="wish_birthday">
                   <i className="fas fa-paper-plane" />
                   Send wishes

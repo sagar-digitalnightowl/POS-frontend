@@ -65,7 +65,7 @@ const Remainder = () => {
           >
             <div className="modal-dialog modal-dialog-centered" role="document">
               <form method="POST"
-                action="https://medipro.affinity-me.com/essentials/reminder"
+                // action="https://medipro.affinity-me.com/essentials/reminder"
                 acceptCharset="UTF-8"id="reminder_form">
                 <div className="modal-content">
                   <div className="modal-header">

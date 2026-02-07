@@ -18,7 +18,8 @@ const ImportPurchase = () => {
                         <div className="col-md-12">
                             <div className="box box-solid">
                                 <div className="box-body">
-                                    <form method="POST" action="https://medipro.affinity-me.com/import-purchase/preview"
+                                    <form method="POST" 
+                                    // action="https://medipro.affinity-me.com/import-purchase/preview"
                                     acceptCharset="UTF-8"encType="multipart/form-data">
                                         <input name="_token"type="hidden"defaultValue="KfdyBpPmaZmB2SBdAlbcFSEaxSyGdqUgvwaCtqtB"/>
                                         <div className="row">
@@ -40,7 +41,9 @@ const ImportPurchase = () => {
                                         <div className="row">
                                             <div className="col-sm-12">
                                             <br />
-                                            <Link to="https://medipro.affinity-me.com/files/import_purchase_template.xlsx" className="btn btn-success"download="">
+                                            <Link 
+                                                // to="https://medipro.affinity-me.com/files/import_purchase_template.xlsx" 
+                                                className="btn btn-success"download="">
                                                 <i className="fa fa-download" /> Download template file
                                             </Link>
                                         </div>

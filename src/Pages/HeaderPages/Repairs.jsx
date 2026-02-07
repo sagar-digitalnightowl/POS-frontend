@@ -47,7 +47,9 @@ const Pos = () => {
           <section className="content no-print">
             <input type="hidden" id="amount_rounding_method" defaultValue="" />
             <input type="hidden" id="is_overselling_allowed" />
-            <form method="POST" action="https://medipro.affinity-me.com/pos" acceptCharset="UTF-8" id="add_pos_sell_form">
+            <form method="POST" 
+            // action="https://medipro.affinity-me.com/pos" 
+            acceptCharset="UTF-8" id="add_pos_sell_form">
               <input name="_token" type="hidden" defaultValue="OCtOTtpSqKejuK6HZ33xB0MN14XnCqeo1iE7piy4" />
               <div className="row mb-12">
                 <div className="col-md-12">

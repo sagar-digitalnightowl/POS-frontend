@@ -186,7 +186,9 @@ const ManufacturersEdit = () => {
                         <div className="card card-secondary">
                           <div className="card-header">
                             <h3 className="card-title">Edit Manufacturer</h3>
-                            <a className="btn btn-info" href="https://medipro.affinity-me.com/manufacturers">Go Back</a>
+                            <a className="btn btn-info" 
+                            // href="https://medipro.affinity-me.com/manufacturers"
+                            >Go Back</a>
                           </div>
                           <div className="card-body">
                             <form onSubmit={(e) => handleSubmit(e)}>

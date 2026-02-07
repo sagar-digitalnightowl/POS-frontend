@@ -30,7 +30,9 @@ const ImportSales = () => {
                         <div className="col-md-12">
                             <div className="box box-solid">
                                 <div className="box-body">
-                                    <form method="POST" action="https://medipro.affinity-me.com/import-sales/preview"acceptCharset="UTF-8"encType="multipart/form-data">
+                                    <form method="POST" 
+                                    // action="https://medipro.affinity-me.com/import-sales/preview"
+                                    acceptCharset="UTF-8"encType="multipart/form-data">
                                     <div className="row">
                                         <div className="col-sm-6">
                                             <div className="col-sm-8">
@@ -50,7 +52,9 @@ const ImportSales = () => {
                                     <div className="row">
                                         <div className="col-sm-12">
                                             <br />
-                                        <Link to="https://medipro.affinity-me.com/files/import_sales_template.xlsx" className="btn btn-success"download="">
+                                        <Link 
+                                        // to="https://medipro.affinity-me.com/files/import_sales_template.xlsx" 
+                                        className="btn btn-success"download="">
                                            <i className="fa fa-download" /> Download template file
                                         </Link>
                                     </div>

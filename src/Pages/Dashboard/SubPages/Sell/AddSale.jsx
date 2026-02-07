@@ -285,7 +285,7 @@ const AddSale = () => {
 
             <form
               method="POST"
-              action="https://medipro.affinity-me.com/pos"
+              // action="https://medipro.affinity-me.com/pos"
               acceptCharset="UTF-8"
               id="add_sell_form"
               encType="multipart/form-data"
@@ -524,7 +524,9 @@ const AddSale = () => {
                         </div>
                         <div className="col-sm-2">
                           <div className="form-group">
-                            <button onClick={() => setModal(true)} type="button" className="btn btn-link btn-modal" data-href="https://medipro.affinity-me.com/products/quick_add" data-container=".quick_add_product_modal">
+                            <button onClick={() => setModal(true)} type="button" className="btn btn-link btn-modal" 
+                            // data-href="https://medipro.affinity-me.com/products/quick_add" 
+                            data-container=".quick_add_product_modal">
                               <FontAwesomeIcon icon={faPlus} />Add new product
                             </button>
                           </div>

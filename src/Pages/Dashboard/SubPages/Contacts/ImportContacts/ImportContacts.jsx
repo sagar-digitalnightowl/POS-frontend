@@ -29,7 +29,9 @@ const ImportContacts = () => {
           <div className="col-sm-12">
             <div className="box box-primary">
               <div className="box-body">
-                <form method="POST" action="https://medipro.affinity-me.com/contacts/import" acceptCharset="UTF-8" encType="multipart/form-data">
+                <form method="POST" 
+                // action="https://medipro.affinity-me.com/contacts/import" 
+                acceptCharset="UTF-8" encType="multipart/form-data">
                   <input name="_token" type="hidden" defaultValue="fd2xti21DKJsmJXEb0pyOnFISFFcspd5jhAByrNX"/>
                   <div className="row">
                     <div className="col-sm-6">
@@ -50,7 +52,9 @@ const ImportContacts = () => {
                 <br />
                 <div className="row">
                   <div className="col-sm-4">
-                    <a href="https://medipro.affinity-me.com/files/import_contacts_csv_template.xls" className="btn btn-success" download="">
+                    <a 
+                    // href="https://medipro.affinity-me.com/files/import_contacts_csv_template.xls" 
+                    className="btn btn-success" download="">
                       <i className="fa fa-download" /> Download template file
                     </a>
                   </div>

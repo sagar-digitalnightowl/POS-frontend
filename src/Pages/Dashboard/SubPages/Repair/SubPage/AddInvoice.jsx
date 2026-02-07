@@ -107,7 +107,9 @@ const AddInvoice = () => {
 <div style={textStyle}>
   <div className="wrapper thetop">
     <div className="col-md-12 no-print pos-header">
-      <input type="hidden" id="pos_redirect_url"defaultValue="https://medipro.affinity-me.com/pos/create?sub_type=repair"/>
+      <input type="hidden" id="pos_redirect_url"
+      // defaultValue="https://medipro.affinity-me.com/pos/create?sub_type=repair"
+      />
       <div className="row">
         <div className="col-md-6">
           <div className="m-6 mt-5" style={{ display: "flex" }}>
@@ -119,7 +121,9 @@ const AddInvoice = () => {
           </div>
         </div>
         <div className="col-md-6">
-          <a href="https://medipro.affinity-me.com/repair/repair" title="Go Back"className="btn btn-info btn-flat m-6 btn-xs m-5 pull-right">
+          <a 
+          // href="https://medipro.affinity-me.com/repair/repair" 
+          title="Go Back"className="btn btn-info btn-flat m-6 btn-xs m-5 pull-right">
             <strong>
             <FontAwesomeIcon icon={faArrowLeft} />
             </strong>
@@ -181,7 +185,9 @@ const AddInvoice = () => {
       <section className="content no-print">
         <input type="hidden" id="amount_rounding_method" defaultValue="" />
         <input type="hidden" id="is_overselling_allowed" />
-        <form method="POST"action="https://medipro.affinity-me.com/pos"acceptCharset="UTF-8"id="add_pos_sell_form">
+        <form method="POST"
+        // action="https://medipro.affinity-me.com/pos"
+        acceptCharset="UTF-8"id="add_pos_sell_form">
           <input name="_token" type="hidden"defaultValue="UP5U2B6MOtnumDKeS9rqPXmLXxWVensgVXHOkudW"/>
           <div className="row mb-12">
             <div className="col-md-12">
@@ -228,7 +234,8 @@ const AddInvoice = () => {
                                 placeholder="Enter Product name / SKU / Scan bar code" autofocus="" name="search_product"type="text"/>
                               <span className="input-group-btn">
                                 <button type="button" className="btn btn-default bg-white btn-flat pos_add_quick_product"
-                                  data-href="https://medipro.affinity-me.com/products/quick_add"data-container=".quick_add_product_modal">
+                                  // data-href="https://medipro.affinity-me.com/products/quick_add"
+                                  data-container=".quick_add_product_modal">
                                   <FontAwesomeIcon icon={faPlusCircle} className="text-primary fa-lg" />
                                 </button>
                               </span>

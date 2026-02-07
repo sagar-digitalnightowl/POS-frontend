@@ -99,7 +99,7 @@ const Barcode = () => {
   Anything you want
       </div> */}
         {/* Default to the left */}
-        <small>Medipro - V5.30 | Copyright © 2024 All rights reserved.</small>
+        <small>Copyright © 2024 All rights reserved.</small>
         <div className="btn-group pull-right">
           <button
             type="button"
@@ -134,34 +134,34 @@ const Barcode = () => {
         </div>
       </footer>
       <audio id="success-audio">
-        <source
+        {/* <source
           src="https://medipro.affinity-me.com/audio/success.ogg?v=530"
           type="audio/ogg"
-        />
-        <source
+        /> */}
+        {/* <source
           src="https://medipro.affinity-me.com/audio/success.mp3?v=530"
           type="audio/mpeg"
-        />
+        /> */}
       </audio>
       <audio id="error-audio">
-        <source
+        {/* <source
           src="https://medipro.affinity-me.com/audio/error.ogg?v=530"
           type="audio/ogg"
         />
         <source
           src="https://medipro.affinity-me.com/audio/error.mp3?v=530"
           type="audio/mpeg"
-        />
+        /> */}
       </audio>
       <audio id="warning-audio">
-        <source
+        {/* <source
           src="https://medipro.affinity-me.com/audio/warning.ogg?v=530"
           type="audio/ogg"
         />
         <source
           src="https://medipro.affinity-me.com/audio/warning.mp3?v=530"
           type="audio/mpeg"
-        />
+        /> */}
       </audio>
     </div>
     <div
@@ -187,7 +187,7 @@ const Barcode = () => {
         <div className="modal-content">
           <form
             method="POST"
-            action="https://medipro.affinity-me.com/hrm/clock-in-clock-out"
+            // action="https://medipro.affinity-me.com/hrm/clock-in-clock-out"
             acceptCharset="UTF-8"
             id="clock_in_clock_out_form"
           >

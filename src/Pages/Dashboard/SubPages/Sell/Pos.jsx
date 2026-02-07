@@ -44,7 +44,9 @@ const Pos = () => {
           <section className="content no-print">
             <input type="hidden" id="amount_rounding_method" defaultValue="" />
             <input type="hidden" id="is_overselling_allowed" />
-            <form method="POST" action="https://medipro.affinity-me.com/pos" acceptCharset="UTF-8" id="add_pos_sell_form">
+            <form method="POST" 
+            // action="https://medipro.affinity-me.com/pos" 
+            acceptCharset="UTF-8" id="add_pos_sell_form">
               <input name="_token" type="hidden" defaultValue="OCtOTtpSqKejuK6HZ33xB0MN14XnCqeo1iE7piy4" />
               <div className="row mb-12">
                 <div className="col-md-12">
@@ -104,7 +106,7 @@ const Pos = () => {
                                     <button
                                       type="button"
                                       className="btn btn-default bg-white btn-flat pos_add_quick_product"
-                                      data-href="https://medipro.affinity-me.com/products/quick_add"
+                                      // data-href="https://medipro.affinity-me.com/products/quick_add"
                                       data-container=".quick_add_product_modal"
                                     >
                                       <FontAwesomeIcon icon={faPlusCircle} className="text-primary fa-lg" />

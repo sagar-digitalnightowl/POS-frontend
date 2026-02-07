@@ -29,7 +29,9 @@ const ForgotPassword = () => {
             </div>
             <div className="login-form col-md-12 col-xs-12 right-col-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 'calc(100% - 50px)' }}>
               <div style={{ width: '100%', maxWidth: '400px' }}>
-                <form method="POST" action="https://medipro.affinity-me.com/password/email">
+                <form method="POST" 
+                // action="https://medipro.affinity-me.com/password/email"
+                >
                   <div className="form-group has-feedback">
                     <input id="email"type="email"className="form-control"name="email"
                       defaultValue=""required=""autoFocus=""placeholder="E-Mail Address"

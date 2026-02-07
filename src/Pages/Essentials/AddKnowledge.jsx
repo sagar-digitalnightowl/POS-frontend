@@ -17,7 +17,7 @@ const AddKnowledge = () => {
         <section className="content">
           <form
             method="POST"
-            action="https://medipro.affinity-me.com/essentials/knowledge-base"
+            // action="https://medipro.affinity-me.com/essentials/knowledge-base"
             acceptCharset="UTF-8"
           >
             <div className="box box-solid">

@@ -69,7 +69,9 @@ const Hrm = () => {
               </div>
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12 text-center">
-              <Link to="https://medipro.affinity-me.com/hrm/my-payrolls" className="btn btn-lg btn-success">
+              <Link 
+              // to="https://medipro.affinity-me.com/hrm/my-payrolls" 
+              className="btn btn-lg btn-success">
                 <FontAwesomeIcon icon={faCoins} />
                 My Payrolls          
               </Link>

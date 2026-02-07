@@ -51,7 +51,9 @@ const textStyle={color:'black'}
                 </div>
                 <div id="collapseFilter"className="panel-collapse active collapse  in "aria-expanded="true">
                   <div className="box-body">
-                    <form method="GET"action="https://medipro.affinity-me.com/reports/expense-report"acceptCharset="UTF-8">
+                    <form method="GET"
+                    // action="https://medipro.affinity-me.com/reports/expense-report"
+                    acceptCharset="UTF-8">
                       <div className="col-md-4">
                         <div className="form-group">
                           <label htmlFor="location_id">Business Location:</label>

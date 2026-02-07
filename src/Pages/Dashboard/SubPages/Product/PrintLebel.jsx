@@ -26,7 +26,7 @@ const PrintLebel = () => {
       <section className="content no-print">
         <form
           method="POST"
-          action="https://medipro.affinity-me.com/labels/preview"
+          // action="https://medipro.affinity-me.com/labels/preview"
           acceptCharset="UTF-8"
           target="blank"
         >

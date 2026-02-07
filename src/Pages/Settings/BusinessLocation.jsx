@@ -46,7 +46,7 @@ const BusinessLocation = () => {
                   <button
                     type="button"
                     className="btn btn-block btn-primary btn-modal"
-                    data-href="https://medipro.affinity-me.com/business-location/create"
+                    // data-href="https://medipro.affinity-me.com/business-location/create"
                     data-container=".location_add_modal"
                   >
                     <FaPlus /> Add

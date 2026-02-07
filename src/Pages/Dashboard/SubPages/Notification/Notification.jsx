@@ -18,7 +18,7 @@ const Notification = () => {
         <section className="content">
           <form
             method="POST"
-            action="https://medipro.affinity-me.com/notification-templates"
+            // action="https://medipro.affinity-me.com/notification-templates"
             acceptCharset="UTF-8"
           >
             <div className="row">

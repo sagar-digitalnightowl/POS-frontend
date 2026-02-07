@@ -41,7 +41,7 @@ const StockReport = () => {
                 <div id="collapseFilter" className="panel-collapse active collapse  in "aria-expanded="true">
                   <div className="box-body">
                     <form method="GET"
-                      action="https://medipro.affinity-me.com/reports/stock-report"
+                      // action="https://medipro.affinity-me.com/reports/stock-report"
                       acceptCharset="UTF-8"id="stock_report_filter_form">
                       <div className="col-md-3">
                         <div className="form-group">

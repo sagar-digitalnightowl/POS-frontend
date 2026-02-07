@@ -51,7 +51,7 @@ const paginate = (pageNumber) => setCurrentPage(pageNumber);
                 <div id="collapseFilter" className="panel-collapse active collapse  in " aria-expanded="true">
                   <div className="box-body">
                     <form method="GET"
-                      action="https://medipro.affinity-me.com/reports/stock-report"
+                      // action="https://medipro.affinity-me.com/reports/stock-report"
                       acceptCharset="UTF-8"id="register_report_filter_form">
                       <div className="col-md-4">
                         <div className="form-group">

@@ -35,7 +35,7 @@ const BusinessLocationSetting = () => {
                     <div className="row">
                       <div className="col-md-12">
                         <form method="POST"
-                          action="https://medipro.affinity-me.com/business-location/4/settings"
+                          // action="https://medipro.affinity-me.com/business-location/4/settings"
                           acceptCharset="UTF-8"id="bl_receipt_setting_form">
                           <div className="col-sm-4">
                             <div className="form-group">

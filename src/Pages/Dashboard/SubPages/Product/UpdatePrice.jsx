@@ -23,12 +23,16 @@ const UpdatePrice = () => {
           <div className="box-body">
             <div className="row">
               <div className="col-sm-6">
-                <a href="https://medipro.affinity-me.com/export-product-price" className="btn btn-primary">
+                <a 
+                // href="https://medipro.affinity-me.com/export-product-price" 
+                className="btn btn-primary">
                   Export product prices
                 </a>
               </div>
               <div className="col-sm-6">
-                <form method="POST" action="https://medipro.affinity-me.com/import-product-price" acceptCharset="UTF-8" encType="multipart/form-data">
+                <form method="POST" 
+                // action="https://medipro.affinity-me.com/import-product-price"
+                 acceptCharset="UTF-8" encType="multipart/form-data">
                   <input
                     name="_token"
                     type="hidden"

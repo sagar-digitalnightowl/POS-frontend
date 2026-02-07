@@ -21,7 +21,9 @@ const Settings = () => {
             <h1>Essentials and HRM Settings</h1>
           </section>
           <section className="content">
-            <form method="POST" action="https://medipro.affinity-me.com/hrm/settings" acceptCharset="UTF-8" id="essentials_settings_form">
+            <form method="POST" 
+            // action="https://medipro.affinity-me.com/hrm/settings" 
+            acceptCharset="UTF-8" id="essentials_settings_form">
               <div className="row">
                 <div className="col-xs-12">
                   <div className="col-xs-12 pos-tab-container">

@@ -193,7 +193,9 @@ return(
                   </h3>
                 </div>
                 <div className="box-footer bg-gray disabled text-center">
-                  <Link to="https://medipro.affinity-me.com/subscription/7/pay"className="btn btn-block btn-success">
+                  <Link 
+                  // to="https://medipro.affinity-me.com/subscription/7/pay"
+                  className="btn btn-block btn-success">
                     Pay &amp; Subscribe
                   </Link>
                   NHRA

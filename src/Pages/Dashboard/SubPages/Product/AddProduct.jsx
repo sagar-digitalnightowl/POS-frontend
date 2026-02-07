@@ -434,7 +434,7 @@ const AddProduct = () => {
                               <button
                                 type="button"
                                 className="btn btn-default bg-white btn-flat btn-modal"
-                                data-href="https://medipro.affinity-me.com/units/create?quick_add=1"
+                                // data-href="https://medipro.affinity-me.com/units/create?quick_add=1"
                                 title="Add Unit"
                                 data-container=".view_modal"
                               >
@@ -498,7 +498,7 @@ const AddProduct = () => {
                               <button
                                 type="button"
                                 className="btn btn-default bg-white btn-flat btn-modal"
-                                data-href="https://medipro.affinity-me.com/brands/create?quick_add=1"
+                                // data-href="https://medipro.affinity-me.com/brands/create?quick_add=1"
                                 title="Add brand"
                                 data-container=".view_modal"
                               >

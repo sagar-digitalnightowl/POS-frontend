@@ -615,7 +615,7 @@ const ListProduct = () => {
                   <div className="modal-content">
                     <form
                       method="POST"
-                      action="https://medipro.affinity-me.com/products/bulk-update-location"
+                      // action="https://medipro.affinity-me.com/products/bulk-update-location"
                       acceptCharset="UTF-8"
                       id="edit_product_location_form"
                     >

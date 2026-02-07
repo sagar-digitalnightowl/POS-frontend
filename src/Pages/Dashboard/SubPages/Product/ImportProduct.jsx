@@ -23,7 +23,7 @@ const ImportProduct = () => {
               <div className="box-body">
                 <form
                   method="POST"
-                  action="https://medipro.affinity-me.com/import-products/store"
+                  // action="https://medipro.affinity-me.com/import-products/store"
                   acceptCharset="UTF-8"
                   encType="multipart/form-data"
                 >
@@ -57,7 +57,9 @@ const ImportProduct = () => {
                 <br />
                 <div className="row">
                   <div className="col-sm-4">
-                    <Link to="https://medipro.affinity-me.com/files/import_products_csv_template.xls" className="btn btn-success" download="">
+                    <Link 
+                    // to="https://medipro.affinity-me.com/files/import_products_csv_template.xls"
+                     className="btn btn-success" download="">
                       <i className="fa fa-download" /> Download template file
                     </Link>
                   </div>
@@ -524,17 +526,16 @@ const ImportProduct = () => {
     </div>
     <Footer/>
     <audio id="success-audio">
-      <source src="https://medipro.affinity-me.com/audio/success.ogg?v=530" type="audio/ogg"/>
-      <source src="https://medipro.affinity-me.com/audio/success.mp3?v=530" type="audio/mpeg"/>
+      {/* <source src="https://medipro.affinity-me.com/audio/success.ogg?v=530" type="audio/ogg"/>
+      <source src="https://medipro.affinity-me.com/audio/success.mp3?v=530" type="audio/mpeg"/> */}
     </audio>
     <audio id="error-audio">
-      <source src="https://medipro.affinity-me.com/audio/error.ogg?v=530" type="audio/ogg"/>
-      <source src="https://medipro.affinity-me.com/audio/error.mp3?v=530" type="audio/mpeg"/>
+      {/* <source src="https://medipro.affinity-me.com/audio/error.ogg?v=530" type="audio/ogg"/>
+      <source src="https://medipro.affinity-me.com/audio/error.mp3?v=530" type="audio/mpeg"/> */}
     </audio>
     <audio id="warning-audio">
-      <source src="https://medipro.affinity-me.com/audio/warning.ogg?v=530" type="audio/ogg" />
-      <source src="https://medipro.affinity-me.com/audio/warning.mp3?v=530" type="audio/mpeg"
-      />
+      {/* <source src="https://medipro.affinity-me.com/audio/warning.ogg?v=530" type="audio/ogg" />
+      <source src="https://medipro.affinity-me.com/audio/warning.mp3?v=530" type="audio/mpeg"/> */}
     </audio>
   </div>
   <div

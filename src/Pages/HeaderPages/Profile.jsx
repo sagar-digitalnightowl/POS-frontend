@@ -15,7 +15,8 @@ const Profile = () => {
           <h1>My Profile</h1>
         </section>
         <section className="content">
-          <form method="POST"action="https://medipro.affinity-me.com/user/update-password"
+          <form method="POST"
+          // action="https://medipro.affinity-me.com/user/update-password"
             acceptCharset="UTF-8"id="edit_password_form"className="form-horizontal">
             <div className="row">
               <div className="col-sm-12">
@@ -153,7 +154,7 @@ const Profile = () => {
                   <div className="box-body">
                     <div className="col-md-12 text-center">
                       <img
-                        src="https://medipro.affinity-me.com/uploads/media/1698649031_1249173008_middle%20pearl%20logo.jpeg"
+                        // src="https://medipro.affinity-me.com/uploads/media/1698649031_1249173008_middle%20pearl%20logo.jpeg"
                         width={150}height={150}className="img-circle"
                       />
                     </div>
