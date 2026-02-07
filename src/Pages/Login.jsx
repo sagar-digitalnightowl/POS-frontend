@@ -7,7 +7,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [agreement, setAgreement] = useState('');
+  const [agreement, setAgreement] = useState(true);
   const [loading, setLoading] = useState(false);
 
   const [email, setEmail] = useState('');
@@ -110,6 +110,7 @@ const Login = () => {
                   </div>
 
                   {/* Remember Me Checkbox */}
+                  {/* 
                   <div className="form-group">
                     <label>
                       <input
@@ -120,8 +121,10 @@ const Login = () => {
                       Remember Me
                     </label>
                   </div>
+                  */}
 
                   {/* Terms and Conditions Checkbox */}
+                  {/*
                   <div className="form-group">
                     <label>
                       <input
@@ -136,6 +139,7 @@ const Login = () => {
                       </Link>
                     </label>
                   </div>
+                  */}
 
                   {/* Login Button */}
                   <div className="form-group">
